@@ -23,6 +23,7 @@ router.post('/register',  function(req,res,next){
 })
 
 router.post('/login', function(req,res,next){
+  
    let promise = User.findOne({email:req.body.email}).exec();
 
    promise.then(function(doc){
